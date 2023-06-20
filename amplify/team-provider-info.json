@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-paragon-dev-225211-authRole",
+      "UnauthRoleArn": "arn:aws:iam::483815055570:role/amplify-paragon-dev-225211-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::483815055570:role/amplify-paragon-dev-225211-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-paragon-dev-225211-deployment",
+      "UnauthRoleName": "amplify-paragon-dev-225211-unauthRole",
+      "StackName": "amplify-paragon-dev-225211",
+      "StackId": "arn:aws:cloudformation:eu-west-1:483815055570:stack/amplify-paragon-dev-225211/c8fe6a40-0eda-11ee-953a-02a37e0009a5",
+      "AmplifyAppId": "d2axjdiqsovj7a"
+    }
+  }
+}
