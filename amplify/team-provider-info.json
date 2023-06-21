@@ -10,6 +10,14 @@
       "StackName": "amplify-paragon-dev-225211",
       "StackId": "arn:aws:cloudformation:eu-west-1:483815055570:stack/amplify-paragon-dev-225211/c8fe6a40-0eda-11ee-953a-02a37e0009a5",
       "AmplifyAppId": "d2axjdiqsovj7a"
+    },
+    "categories": {
+      "auth": {
+        "paragonAuth": {}
+      },
+      "storage": {
+        "s3Storage": {}
+      }
     }
   }
 }
