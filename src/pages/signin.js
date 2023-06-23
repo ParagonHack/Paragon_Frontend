@@ -36,10 +36,9 @@ export default function Home() {
         {({ signOut, user }) => (
           <main>
             <h1>Hello, {user.username}!</h1>
-              {/*<div style={{width: '100%'}}>
+              <div style={{width: '100%'}}>
                 <VideoPlayer fileKey='videos/video_id=12345/video.mp4' />
-            </div>
-            */}
+              </div>
             <button onClick={signOut}>Sign out</button>
           </main>
         )}
