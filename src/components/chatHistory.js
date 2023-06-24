@@ -20,7 +20,7 @@ const ChatHistory = () => {
 
    */
   return (
-      <div className="flex items-center flex-col bg-white h-100 w-1/6 rounded-3xl m-2 p-4"style={{ marginLeft: '20px' }}>
+      <div className="flex items-center flex-col bg-white h-100 w-1/6 rounded-3xl m-2 p-4">
           <span className={"text-black"}>Chat History</span>
           {Object.keys(chat_history).map(k => {
               return <span className={"text-black"}>{k}</span>
