@@ -15,8 +15,8 @@ const ChatWindow = () => {
 
    */
   return (
-      <div className="flex items-center flex-col bg-white h-100 w-3/12 rounded-3xl m-2">
-          <span className={"mt-2 text-black"}>Chat</span>
+      <div className="flex items-center flex-col bg-white h-100 w-3/12 rounded-3xl m-2 p-4">
+          <span className={"text-black"}>Chat</span>
       </div>
   )
 }

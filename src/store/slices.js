@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { AppState } from "./store";
 import { HYDRATE } from "next-redux-wrapper";
 
 // Initial state
 const initialState = {
   authState: false,
-  selectedVideo: ''
+  selectedVideo: '',
+  chatHistory: {},
+  selectedChat: ''
 }
 
 export const slice = createSlice({
@@ -20,6 +21,18 @@ export const slice = createSlice({
     setVideo(state, action) {
       state.selectedVideo = action.payload
     },
+    //Action to set the chat history with saving to s3
+    setChatHistory(state, action) {
+      state.chatHistory = action.payload
+    },
+    //Action to set the selected chat
+    setSelectedChat(state, action) {
+      state.chatHistory = action.payload
+    },
+    //Action to revert to initialState
+    setInitialState(state, action) {
+      state = initialState
+    }
   },
 
   // Special reducer for hydrating the state. Special case for next-redux-wrapper
@@ -27,16 +40,17 @@ export const slice = createSlice({
     [HYDRATE]: (state, action) => {
       return {
         ...state,
-        ...action.payload.auth,
+        ...action.payload.slicer,
       };
     },
   },
 });
 
-export const { setAuthState, setVideo } = slice.actions;
+export const { setAuthState, setVideo, setInitialState, setChatHistory } = slice.actions;
 
 export const selectAuthState = (state) => state.slicer.authState;
-
 export const selectVideo = (state) => state.slicer.selectedVideo;
+export const selectChatHistory = (state) => state.slicer.chatHistory;
+export const selectChat = (state) => state.slicer.selectedChat;
 
 export default slice.reducer;

@@ -1,11 +1,27 @@
-import {selectVideo, setVideo} from "../store/slices";
+import {selectVideo, selectChatHistory, setVideo, setChatHistory} from "../store/slices";
 import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import dataManager from "../helpers/dataManager";
 
 const VideoWindow = () => {
     const selected_video = useSelector(selectVideo);
+    const chat_history = useSelector(selectChatHistory);
     const dispatch = useDispatch();
+    const [searchInput, setSearchInput] = useState("");
 
-    console.log("Selected VIDEO: ", selected_video)
+    const findMatch = () => {
+        //Need to implement API endpoint
+        //and create new chat
+        let new_chat_history = {...chat_history}
+        new_chat_history[searchInput] = [{
+            "message": searchInput,
+            "role": "user"
+        }]
+        dataManager.saveChats(new_chat_history).then(() => {
+            dispatch(setChatHistory(new_chat_history))
+            setSearchInput('')
+        })
+    }
 
     /*
     const loadVideoDescription = async () => {
@@ -22,8 +38,16 @@ const VideoWindow = () => {
 
    */
     return (
-        <div className="flex items-center flex-col bg-white h-100 w-1/2 rounded-3xl m-2">
-            <span className={"mt-2 text-black"}>Videos</span>
+        <div className="flex items-center flex-col justify-between bg-white h-100 w-1/2 rounded-3xl m-2 p-4">
+            <span className="text-black">Videos</span>
+            <div className="bg-black w-11/12 h-3/4"/>
+            <div className="flex-row align-items-center justify-between w-11/12 h-10">
+                <input className="text-black w-3/4 border-2 rounded-md border-black"
+                       onChange={(e) => {setSearchInput(e.target.value)}}
+                       value={searchInput}
+                />
+                <button className="h-full w-1/4 text-black" onClick={findMatch}>Search</button>
+            </div>
         </div>
     )
 }

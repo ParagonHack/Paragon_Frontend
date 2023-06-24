@@ -1,5 +1,10 @@
-const ChatHistory = () => {
+import {selectChatHistory, setChatHistory} from "../store/slices";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import dataManager from "../helpers/dataManager";
 
+const ChatHistory = () => {
+    const chat_history = useSelector(selectChatHistory)
        /*
   const loadVideoDescription = async () => {
         const s3 = await createS3Object()
@@ -15,8 +20,11 @@ const ChatHistory = () => {
 
    */
   return (
-      <div className="flex items-center flex-col bg-white h-100 w-1/6 rounded-3xl m-2">
-          <span className={"mt-2 text-black"}>Chat History</span>
+      <div className="flex items-center flex-col bg-white h-100 w-1/6 rounded-3xl m-2 p-4">
+          <span className={"text-black"}>Chat History</span>
+          {Object.keys(chat_history).map(k => {
+              return <span className={"text-black"}>{k}</span>
+          })}
       </div>
   )
 }
