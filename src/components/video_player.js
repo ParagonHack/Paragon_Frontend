@@ -33,7 +33,6 @@ const VideoPlayer = ({ fileKey }) => {
 
     createS3Object().then(s3 => {
       const url = s3.getSignedUrl('getObject', {Bucket: s3.config.Bucket, Key: fileKey})
-      console.log("URL: ", url + '#.mp4')
       const player = VideoJs(videoContainer.current.querySelector('video'), videoJsOptions, async () => {
         logger.debug(`Version of video.js is ${VideoJs.VERSION}`)
         player.src(url + '#.mp4')
