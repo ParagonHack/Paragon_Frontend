@@ -2,6 +2,7 @@ import VideoPlayer from "./video_player";
 import ChatWindow from "./chatWindow";
 import VideoWindow from "./videoWindow";
 import ChatHistory from "./chatHistory";
+import HeaderHome from "./headerHome";
 
 
 const Dashboard = () => {
@@ -22,6 +23,7 @@ const Dashboard = () => {
 
   return (
       <div className="flex h-full w-full flex-row justify-around">
+          <HeaderHome/>
           <ChatHistory/>
           <VideoWindow/>
           <ChatWindow/>

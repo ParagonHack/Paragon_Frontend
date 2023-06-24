@@ -4,9 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Auth } from 'aws-amplify';
 
 const Header = () => {
-  const authState = useSelector(selectAuthState);
-  const dispatch = useDispatch();
-
+ 
   return (
     <nav className="bg-gray-900 py-4">
       <div className="container mx-auto flex items-center justify-between">
@@ -16,11 +14,9 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center">
-          {authState &&
-            <button onClick={() => {Auth.signOut().then(() => dispatch(setAuthState(false)))}}>
-              Sign out
-            </button>
-          }
+           <Link href="/signin">
+              <span className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50r">Sign In</span>
+           </Link>
         </div>
       </div>
     </nav>
