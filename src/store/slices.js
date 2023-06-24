@@ -4,17 +4,21 @@ import { HYDRATE } from "next-redux-wrapper";
 
 // Initial state
 const initialState = {
-  authState: false
+  authState: false,
+  selectedVideo: ''
 }
 
-// Actual Slice
-export const authSlice = createSlice({
-  name: "auth",
+export const slice = createSlice({
+  name: "slicer",
   initialState,
   reducers: {
     // Action to set the authentication status
     setAuthState(state, action) {
       state.authState = action.payload
+    },
+    //Action to set the video selected
+    setVideo(state, action) {
+      state.selectedVideo = action.payload
     },
   },
 
@@ -29,8 +33,10 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setAuthState } = authSlice.actions;
+export const { setAuthState, setVideo } = slice.actions;
 
-export const selectAuthState = (state) => state.auth.authState;
+export const selectAuthState = (state) => state.slicer.authState;
 
-export default authSlice.reducer;
+export const selectVideo = (state) => state.slicer.selectedVideo;
+
+export default slice.reducer;

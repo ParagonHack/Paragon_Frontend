@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { selectAuthState, setAuthState } from "../store/authSlice";
+import { selectAuthState, setAuthState } from "../store/slices";
 import { useDispatch, useSelector } from "react-redux";
 import { Auth } from 'aws-amplify';
 

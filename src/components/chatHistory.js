@@ -1,12 +1,6 @@
-import VideoPlayer from "./video_player";
-import ChatWindow from "./chatWindow";
-import VideoWindow from "./videoWindow";
-import ChatHistory from "./chatHistory";
+const ChatHistory = () => {
 
-
-const Dashboard = () => {
-
-  /*
+       /*
   const loadVideoDescription = async () => {
         const s3 = await createS3Object()
         const url = s3.getSignedUrl('getObject', {Bucket: s3.config.Bucket, Key: 'videos/video_id=12345/metadata.json'})
@@ -18,15 +12,13 @@ const Dashboard = () => {
         console.log(json)
         return json
   }
-  */
 
+   */
   return (
-      <div className="flex h-full w-full flex-row justify-around">
-          <ChatHistory/>
-          <VideoWindow/>
-          <ChatWindow/>
+      <div className="flex items-center flex-col bg-white h-100 w-1/6 rounded-3xl m-2">
+          <span className={"mt-2 text-black"}>Chat History</span>
       </div>
   )
 }
 
-export default Dashboard
+export default ChatHistory
