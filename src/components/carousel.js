@@ -10,8 +10,8 @@ const Carousel = () => {
               <h1 className="display-4">About Us</h1>
               <p className="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
-              <Link href="contact.html">
-                <button className="btn btn-primary rounded-pill">Contact Us</button>
+              <Link href="contact.html" to="first" style={{ textDecoration: 'none' }}>
+                <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Contact Us</button>
               </Link>
             </div>
             <div className="col-lg-6 d-none d-lg-block">
@@ -40,8 +40,8 @@ const Carousel = () => {
               <h2 className="font-weight-light">Experiences</h2>
               <p className="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
-              <Link href="contact.html">
-                <button className="btn btn-primary rounded-pill">Learn More</button>
+              <Link href="contact.html" to="first" style={{ textDecoration: 'none' }}>
+                <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Learn More</button>
               </Link>
             </div>
           </div>
@@ -60,7 +60,7 @@ const Carousel = () => {
               <p className="title">CEO &amp; Founder</p>
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
               <p>example@example.com</p>
-              <p><button className="button bg-primary">Contact</button></p>
+              <p><button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Contact</button></p>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ const Carousel = () => {
               <p className="title">Art Director</p>
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
               <p>example@example.com</p>
-              <p><button className="button bg-primary">Contact</button></p>
+              <p><button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Contact</button></p>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ const Carousel = () => {
               <p className="title">Designer</p>
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
               <p>example@example.com</p>
-              <p><button className="button bg-primary">Contact</button></p>
+              <p><button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Contact</button></p>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ const Carousel = () => {
               <p className="title">Marketing Manager</p>
               <p>Some text that describes me lorem ipsum ipsum lorem.</p>
               <p>example@example.com</p>
-              <p><button className="button bg-primary">Contact</button></p>
+              <p><button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Contact</button></p>
             </div>
           </div>
         </div>

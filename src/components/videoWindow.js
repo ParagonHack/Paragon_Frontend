@@ -38,16 +38,10 @@ const VideoWindow = () => {
 
    */
     return (
-        <div className="flex items-center flex-col justify-between bg-white h-100 w-1/2 rounded-3xl m-2 p-4">
-            <span className="text-black">Videos</span>
+        <div className="flex flex-col h-screen bg-gray-900 rounded-3xl">
+            <h1 className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text text-center py-3 font-bold text-6xl">Matched Videos</h1>
             <div className="bg-black w-11/12 h-3/4"/>
-            <div className="flex-row align-items-center justify-between w-11/12 h-10">
-                <input className="text-black w-3/4 border-2 rounded-md border-black"
-                       onChange={(e) => {setSearchInput(e.target.value)}}
-                       value={searchInput}
-                />
-                <button className="h-full w-1/4 text-black" onClick={findMatch}>Search</button>
-            </div>
+
         </div>
     )
 }

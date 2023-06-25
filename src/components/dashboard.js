@@ -21,9 +21,14 @@ const Dashboard = () => {
 
   return (
       <div className="flex h-full w-full flex-row justify-around">
-          <ChatHistory/>
-          <VideoWindow/>
-          <ChatWindow/>
+        <div class="grid grid-flow-col grid-cols-2 grid-rows-1">
+          <div className="col-span-1">
+            <ChatWindow/>
+          </div>
+          <div className="mx-auto max-w-[2000px]">
+              <VideoWindow/>
+          </div>
+        </div> 
       </div>
   )
 }

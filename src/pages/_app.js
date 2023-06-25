@@ -4,6 +4,7 @@ import "@aws-amplify/ui-react/styles.css"
 import './globals.css'
 import { wrapper } from "../store/store";
 import 'bootstrap/dist/css/bootstrap.min.css';
+require('dotenv').config()
 
 
 Amplify.configure({ ...awsExports, ssr: true })

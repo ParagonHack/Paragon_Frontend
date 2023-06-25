@@ -3,11 +3,14 @@ import Dashboard from "../components/dashboard";
 import {Authenticator} from "@aws-amplify/ui-react";
 import { selectAuthState, setAuthState, setInitialState, setChatHistory } from "../store/slices";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from 'react';
 import dataManager from '../helpers/dataManager'
 import {Auth} from "aws-amplify";
+import { useEffect } from "react";
+
 
 export default function Home() {
+  
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,6 +27,7 @@ export default function Home() {
   }, [])
 
   return (
+
     <div className="flex flex-row h-screen w-screen">
       <HeaderHome/>
       <Dashboard/>

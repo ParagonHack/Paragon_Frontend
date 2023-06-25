@@ -26,5 +26,5 @@ export default function SignIn() {
             }}
         </Authenticator>
     </div>
-  )
+  );
 }
